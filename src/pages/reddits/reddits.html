@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      <ion-label class="">STATS BAWAA IN ACTION...
+          <img class="profilepicsize" align="right" src = "https://3.bp.blogspot.com/-zF5anD_kdI4/Vwr71cYb1PI/AAAAAAAAAlM/7sz7l1RyTUwZF0jkVbypdrA-6ZDmgLYJg/s1600/11707306_708992625867303_6048298340019544001_n.jpg"></ion-label>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+      <ion-item class="item-text-wrap" *ngFor = "let item of items">
+        <ion-thumbnail *ngIf="item.pic1" item-left>
+          <img *ngIf="item.pic1" class="profilepicsize" src = "{{item.pic1.currentSrc}}">
+        </ion-thumbnail>
+        <h2>{{item.title}}</h2>
+     <p *ngIf="item.replies"><ion-icon name ="chatboxes" (click)="viewComments(item)">{{item.replies.totalItems}}</ion-icon></p>
+       <button ion-button clear item-right (click)="viewItem(item)">View</button>
+      </ion-item>
+  </ion-list>
+</ion-content>

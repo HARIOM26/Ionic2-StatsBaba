@@ -1,0 +1,13 @@
+.profilepicsize  {
+    margin: auto;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    //border: 3.5px solid #fff;
+    object-fit: cover; /* Scale the image - Center and crop image*/
+    object-position: center; 
+}
+
+.author {
+  text-align:center;
+}

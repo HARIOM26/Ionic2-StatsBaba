@@ -1,0 +1,10 @@
+<ion-header>
+  <ion-navbar color ="primary">
+    <ion-title>
+   Comments Section....
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-label class="item-text-wrap" *ngFor = "let label of item"><ion-icon name="logo-apple"></ion-icon>{{label.author.displayName}} -- &nbsp;&nbsp;{{label.content}}</ion-label>
+</ion-content>

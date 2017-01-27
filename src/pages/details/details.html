@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color ="primary">
+    <ion-title>
+     {{item.title}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-card>
+  <img  *ngIf="results[0]" class="profilepicsize" src="{{results[0].currentSrc}}"/>
+   <ion-card-title class="row">
+        <ion-item>
+    <ion-label *ngFor = "let label of item.labels"><ion-icon name="logo-apple"></ion-icon>&nbsp;&nbsp;{{label}}</ion-label>
+        </ion-item>
+      </ion-card-title>
+<div [innerHTML]="item.content"></div>
+<div class="author"> <a  ion-button target="_blank" href="{{item.url}}">View on blogger..</a> </div>
+ <hr><ion-label class="author"><strong>Published on --></strong>{{item.published}}</ion-label>
+  </ion-card>
+</ion-content>
